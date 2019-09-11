@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>855</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>音量</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="src.qrc">
+    <normaloff>:/icon/1106822.png</normaloff>:/icon/1106822.png</iconset>
+  </property>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>0</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>云端搜索</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 255, 127,125);</string>
+   </property>
+   <property name="text">
+    <string>薛之谦-好像在哪见过你</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>100</y>
+     <width>501</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-style:italic; color:#0000ff;&quot;&gt;NoMi音乐，感谢聆听！&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::RichText</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>510</y>
+     <width>631</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="roundButton">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>循环方式</string>
+      </property>
+      <property name="whatsThis">
+       <string>循环方式</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/round.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>21</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="priorButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>上一曲</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/piror.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>22</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="playButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>播放</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/play.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="nextButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>下一曲</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/next.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>21</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>当前进度</string>
+      </property>
+      <property name="accessibleDescription">
+       <string>当前进度</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {border: 1px solid #4A708B;background: #CBCBCB;height: 5px;border-radius: 1px;padding-left:-1px;padding-right:-1px;} QSlider::sub-page:horizontal {background: qlineargradient(x1:0, y1:0, x2:0, y2:1,     stop:0 #B1B1B1, stop:1 #c4c4c4);background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,    stop: 0 #5DCCFF, stop: 1 #1874CD);border: 1px solid #4A708B;height: 10px;border-radius: 2px;} QSlider::add-page:horizontal {background: #575757;border: 0px solid #777;height: 10px;border-radius: 2px;} QSlider::handle:horizontal {    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5,     stop:0.6 #45ADED, stop:0.778409 rgba(255, 255, 255, 255));     width: 11px;    margin-top: -3px;    margin-bottom: -3px;    border-radius: 5px;} QSlider::handle:horizontal:hover {    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #2A8BDA,     stop:0.778409 rgba(255, 255, 255, 255));     width: 11px;    margin-top: -3px;    margin-bottom: -3px;    border-radius: 5px;} QSlider::sub-page:horizontal:disabled {background: #00009C;border-color: #999;} QSlider::add-page:horizontal:disabled {background: #eee;border-color: #999;} QSlider::handle:horizontal:disabled {background: #eee;border: 1px solid #aaa;border-radius: 4px;}</string>
+      </property>
+      <property name="pageStep">
+       <number>10</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::NoTicks</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="soundButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>音量</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/sound.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pinglunButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>评论</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/pinglun.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="sizeButton">
+      <property name="cursor">
+       <cursorShape>SizeAllCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>全屏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/size.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>0</y>
+     <width>281</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="themeButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>皮肤</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/theme.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="controlButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>遥控</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/icon/control.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>18</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="deleButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>退到托盘</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="src.qrc">
+        <normaloff>:/icon/close.png</normaloff>:/icon/close.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exitButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>关闭</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="src.qrc">
+        <normaloff>:/icon/destory.png</normaloff>:/icon/destory.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="localButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>0</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="toolTip">
+    <string>打开本地文件</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/icon/cat2.png</normaloff>:/icon/cat2.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>25</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSlider" name="vSlider">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>350</y>
+     <width>16</width>
+     <height>160</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider{
+    border-color: #cbcbcb;
+}
+QSlider::groove:vertical {  
+
+background: #cbcbcb;  
+width: 6px;  
+border-radius: 1px;  
+padding-left:-1px;  
+padding-right:-1px;  
+padding-top:-1px;  
+padding-bottom:-1px;  
+} 
+QSlider::sub-page:vertical {  
+background: #cbcbcb;  
+
+border-radius: 2px;  
+} 
+QSlider::add-page:vertical {  
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1,   
+    stop:0 #439cf4, stop:1 #439cf4);  
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  
+    stop: 0 #439cf4, stop: 1 #439cf4);  
+width: 10px;  
+border-radius: 2px;  
+}
+QSlider::handle:vertical   
+{     
+    border-image: url(:/NiceTalk/Images/Setting/volume_nor.png);
+     margin: -2px -7px -2px -7px; 
+    height: 17px;
+}  </string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="music_Name_label">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>500</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>暂无歌曲播放</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>221</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;列表&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane
+
+{
+	border: 2px;
+	background:transparent;
+}
+
+
+QTabBar::tab
+
+ 
+
+{
+
+min-width:35px;
+
+min-height:30px;
+
+background:transparent;
+
+}</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Triangular</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>17</width>
+     <height>24</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="icon">
+     <iconset>
+      <activeon>:/icon/1230638.png</activeon>
+     </iconset>
+    </attribute>
+    <attribute name="title">
+     <string>列表</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>播放列表</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QListWidget" name="listWidget">
+       <property name="cursor" stdset="0">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="icon">
+     <iconset>
+      <activeon>:/icon/1215104.png</activeon>
+     </iconset>
+    </attribute>
+    <attribute name="title">
+     <string>歌单</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>歌单</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QToolBox" name="toolBox">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#00aaff;&quot;&gt;我的歌单&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:transparent;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>201</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <activeon>:/icon/1215105.png</activeon>
+         </iconset>
+        </attribute>
+        <attribute name="label">
+         <string>我的歌单</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>201</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <activeon>:/icon/1220833.png</activeon>
+         </iconset>
+        </attribute>
+        <attribute name="label">
+         <string>默认歌单</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>
